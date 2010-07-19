@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <PropertyList include="p61-jsbsim-cnf.xml"> -->
+<PropertyList include="p61-yasim-cnf.xml">
+
+  <sim>
+    <description>Northrop P 61</description>
+    <author>BARANGER Emmanuel</author>
+  </sim>
+
+</PropertyList>
+
