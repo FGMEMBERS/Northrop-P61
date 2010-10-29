@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <!-- Gauche extérieur -->
+  <submodel>
+    <name>exterieur left</name>
+    <model>Aircraft/Northrop-P61/Models/Effects/guns/apibullet-tracer.xml</model>
+    <trigger>controls/armament/trigger</trigger>
+    <speed>2460.0</speed>
+    <repeat>true</repeat>
+    <delay>0.6</delay>
+    <count>-1</count>
+    <x-offset> 6.02 </x-offset>    <!-- -1.835 m = 6.02 ft -->
+    <y-offset> 0.80 </y-offset>    <!-- -0.245 m = 0.80 ft -->
+    <z-offset> 3.89 </z-offset>    <!--  1.185 m = 3.89 ft -->
+    <yaw-offset> 0.0 </yaw-offset>
+    <pitch-offset> 0.1 </pitch-offset>
+    <life>4.0</life>
+    <wind>false</wind>
+    <weight>0.07495</weight>
+    <cd>0.193</cd>
+    <eda>0.00571198</eda> 
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/Northrop-P61/Models/Effects/guns/bullet-submodel.xml</submodel-path>
+  </submodel>
+
+  <!--Droit extérieur -->
+  <submodel>
+    <name>exterieur right</name>
+    <model>Aircraft/Northrop-P61/Models/Effects/guns/apibullet-tracer.xml</model>
+    <trigger>controls/armament/trigger</trigger>
+    <speed>2460.0</speed>
+    <repeat>true</repeat>
+    <delay>0.62</delay>
+    <count>-1</count>
+    <x-offset>  6.02 </x-offset>    <!-- -1.835 m =  6.02 ft -->
+    <y-offset> -0.80 </y-offset>    <!--  0.245 m = -0.80 ft -->
+    <z-offset>  3.89 </z-offset>    <!--  1.185 m =  3.89 ft -->
+    <yaw-offset> 0.0 </yaw-offset>
+    <pitch-offset> 0.1 </pitch-offset>
+    <life>4.0</life>
+    <wind>false</wind>
+    <weight>0.07495</weight>
+    <cd>0.193</cd>
+    <eda>0.00571198</eda> 
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/Northrop-P61/Models/Effects/guns/bullet-submodel.xml</submodel-path>
+  </submodel>
+
+  <!--Gauche intérieur -->
+  <submodel>
+    <name>center right</name>
+    <model>Aircraft/Northrop-P61/Models/Effects/guns/apibullet-tracer.xml</model>
+    <trigger>controls/armament/trigger</trigger>
+    <speed>2460.0</speed>
+    <repeat>true</repeat>
+    <delay>0.62</delay>
+    <count>-1</count>
+    <x-offset> 6.02 </x-offset>    <!-- -1.835 m = 6.02 ft -->
+    <y-offset> 0.41 </y-offset>    <!-- -0.125 m = 0.41 ft -->
+    <z-offset> 4.22 </z-offset>    <!--  1.285 m = 4.22 ft -->
+    <yaw-offset> 0.0 </yaw-offset>
+    <pitch-offset> 0.1 </pitch-offset>
+    <life>4.0</life>
+    <wind>false</wind>
+    <weight>0.07495</weight>
+    <cd>0.193</cd>
+    <eda>0.00571198</eda> 
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/Northrop-P61/Models/Effects/guns/bullet-submodel.xml</submodel-path>
+  </submodel>
+
+  <!--Droit intérieur -->
+  <submodel>
+    <name>center right</name>
+    <model>Aircraft/Northrop-P61/Models/Effects/guns/apibullet-tracer.xml</model>
+    <trigger>controls/armament/trigger</trigger>
+    <speed>2460.0</speed>
+    <repeat>true</repeat>
+    <delay>0.62</delay>
+    <count>-1</count>
+    <x-offset>  6.02 </x-offset>    <!-- -1.835 m =  6.02 ft -->
+    <y-offset> -0.41 </y-offset>    <!--  0.125 m = -0.41 ft -->
+    <z-offset>  4.22 </z-offset>    <!--  1.285 m =  4.22 ft -->
+    <yaw-offset> 0.0 </yaw-offset>
+    <pitch-offset> 0.1 </pitch-offset>
+    <life>4.0</life>
+    <wind>false</wind>
+    <weight>0.07495</weight>
+    <cd>0.193</cd>
+    <eda>0.00571198</eda> 
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/Northrop-P61/Models/Effects/guns/bullet-submodel.xml</submodel-path>
+  </submodel>
+
+</PropertyList>
+
