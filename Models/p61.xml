@@ -126,19 +126,6 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
@@ -150,11 +137,6 @@
       <green-prop>emission/green</green-prop>
       <blue-prop>emission/blue</blue-prop>
     </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
@@ -202,19 +184,19 @@
     <object-name>propdiscD</object-name>
   </animation>
 
-  <!-- Une ombre pour OSG
+  <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/Northrop-P61/Models/shadow.xml</path>
-  </model> -->
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -2.000 </z-m>
+    </offsets>
+  </model>
 
-  <!-- Intérieur -->
+  <!-- Intrieur -->
   <model>
     <path>Aircraft/Northrop-P61/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
   </model>
 
   <!-- Effets sur le sol -->
@@ -249,211 +231,76 @@
   </model>
 
   <!-- Effets de tir -->
-  <!-- Extérieur gauche -->
+  <!-- ExtÃ©rieur gauche -->
   <model>
     <path>Aircraft/Northrop-P61/Models/Effects/guns/fire.xml</path>
     <offsets>
-      <x-m> -1.835 </x-m>
+      <x-m> -1.867 </x-m>
       <y-m> -0.245 </y-m>
       <z-m>  1.185 </z-m>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> 180 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
-  <!--Extérieur droit -->
+  <!-- IntÃ©rieur gauche -->
   <model>
     <path>Aircraft/Northrop-P61/Models/Effects/guns/fire.xml</path>
     <offsets>
-      <x-m> -1.835 </x-m>
-      <y-m>  0.245 </y-m>
-      <z-m>  1.185 </z-m>
-     <roll-deg>    0 </roll-deg>
-      <pitch-deg> 180 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model>
-
-  <!-- Intérieur gauche -->
-  <model>
-    <path>Aircraft/Northrop-P61/Models/Effects/guns/fire.xml</path>
-    <offsets>
-      <x-m> -1.835 </x-m>
+      <x-m> -1.867 </x-m>
       <y-m> -0.125 </y-m>
       <z-m>  1.285 </z-m>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> 180 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
-  <!-- Intérieur droit -->
+  <!-- IntÃ©rieur droit -->
   <model>
     <path>Aircraft/Northrop-P61/Models/Effects/guns/fire.xml</path>
     <offsets>
-      <x-m> -1.835 </x-m>
+      <x-m> -1.867 </x-m>
       <y-m>  0.125 </y-m>
       <z-m>  1.285 </z-m>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> 180 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!--ExtÃ©rieur droit -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/Effects/guns/fire.xml</path>
+    <offsets>
+      <x-m> -1.867 </x-m>
+      <y-m>  0.245 </y-m>
+      <z-m>  1.185 </z-m>
+      <pitch-deg> 180 </pitch-deg>
     </offsets>
   </model>
 
   <!-- Cranking effects -->
   <!-- Left -->
   <model>
-    <path>Aircraft/Northrop-P61/Models/Effects/cranking/cranking.xml</path>
+    <path>Aircraft/Northrop-P61/Models/Effects/cranking/all-crankingL.xml</path>
     <offsets>
-      <x-m> -2.979 </x-m>
-      <y-m> -3.338 </y-m>
-      <z-m>  0.319 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <x-m> -2.55346 </x-m>
+      <y-m> -2.76052 </y-m>
+      <z-m> -0.06653 </z-m>
     </offsets>
   </model>
 
   <model>
-    <path>Aircraft/Northrop-P61/Models/Effects/cranking/cranking.xml</path>
+    <path>Aircraft/Northrop-P61/Models/Effects/cranking/all-crankingR.xml</path>
     <offsets>
-      <x-m> -2.979 </x-m>
-      <y-m> -3.455 </y-m>
-      <z-m> -0.067 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Northrop-P61/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -2.979 </x-m>
-      <y-m> -3.441 </y-m>
-      <z-m> -0.202 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Northrop-P61/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -2.979 </x-m>
-      <y-m> -2.080 </y-m>
-      <z-m> -0.202 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Northrop-P61/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -2.979 </x-m>
-      <y-m> -2.080 </y-m>
-      <z-m> -0.067 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Northrop-P61/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -2.979 </x-m>
-      <y-m> -2.183 </y-m>
-      <z-m>  0.319 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model>
-
-  <!-- Right -->
-  <model>
-    <path>Aircraft/Northrop-P61/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -2.979 </x-m>
-      <y-m>  3.338 </y-m>
-      <z-m>  0.319 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Northrop-P61/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -2.979 </x-m>
-      <y-m>  3.455 </y-m>
-      <z-m> -0.067 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Northrop-P61/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -2.979 </x-m>
-      <y-m>  3.441 </y-m>
-      <z-m> -0.202 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Northrop-P61/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -2.979 </x-m>
-      <y-m>  2.080 </y-m>
-      <z-m> -0.202 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Northrop-P61/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -2.979 </x-m>
-      <y-m>  2.080 </y-m>
-      <z-m> -0.067 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Northrop-P61/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -2.979 </x-m>
-      <y-m>  2.183 </y-m>
-      <z-m>  0.319 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <x-m> -2.55346 </x-m>
+      <y-m>  2.76052 </y-m>
+      <z-m> -0.06653 </z-m>
     </offsets>
   </model>
 
   <!-- Moteurs -->
   <!-- gauche -->
   <model>
-    <path>Aircraft/Northrop-P61/Models/Engines/r2800.xml</path>
+    <path>Aircraft/Northrop-P61/Models/Engines/engine.xml</path>
     <offsets>
-      <x-m> -3.614 </x-m>
+      <x-m> -3.334 </x-m>
       <y-m> -2.761 </y-m>
       <z-m> -0.057 </z-m>
     </offsets>
@@ -461,15 +308,15 @@
 
   <!-- droit -->
   <model>
-    <path>Aircraft/Northrop-P61/Models/Engines/r2800.xml</path>
+    <path>Aircraft/Northrop-P61/Models/Engines/engine.xml</path>
     <offsets>
-      <x-m> -3.614 </x-m>
+      <x-m> -3.334 </x-m>
       <y-m>  2.761 </y-m>
       <z-m> -0.057 </z-m>
     </offsets>
   </model>
 
-  <!-- Les hélices --> 
+  <!-- Les hlices --> 
   <animation>
     <name>HeliceCompleteG</name>
     <object-name>propdiscG</object-name>
@@ -478,7 +325,7 @@
     <object-name>bolGE</object-name>
   </animation>
 
-  <!-- Séléction de l'objet visible en fonction des rpm -->
+  <!-- Slction de l'objet visible en fonction des rpm -->
   <animation>
     <type>select</type>
     <object-name>propdiscG</object-name>
@@ -543,7 +390,7 @@
     <object-name>bolD</object-name>
   </animation>
 
-  <!-- Séléction de l'objet visible en fonction des rpm -->
+  <!-- Slction de l'objet visible en fonction des rpm -->
   <animation>
     <type>select</type>
     <object-name>propdiscD</object-name>
@@ -901,7 +748,7 @@
     </axis>
   </animation>
 
-  <!-- Rentré des roues -->
+  <!-- Rentr des roues -->
   <animation>
     <name>TrainAvant</name>
     <object-name>axeAH</object-name>

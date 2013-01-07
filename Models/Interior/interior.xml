@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -31,9 +31,6 @@
       <x-m> -4.737 </x-m>
       <y-m>  0.000 </y-m>
       <z-m>  0.196 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -44,9 +41,6 @@
       <x-m> -2.875 </x-m>
       <y-m>  0.000 </y-m>
       <z-m>  0.437 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -57,8 +51,6 @@
       <x-m>  1.299 </x-m>
       <y-m>  0.000 </y-m>
       <z-m>  0.379 </z-m>
-      <roll-deg>      0 </roll-deg>
-      <pitch-deg>     0 </pitch-deg>
       <heading-deg> 180 </heading-deg>
     </offsets>
   </model>
@@ -70,9 +62,6 @@
       <x-m> -5.324 </x-m>
       <y-m>  0.011 </y-m>
       <z-m>  0.352 </z-m>
-      <roll-deg>     0 </roll-deg>
-      <pitch-deg>    0 </pitch-deg>
-      <heading-deg>  0 </heading-deg>
     </offsets>
   </model>
 

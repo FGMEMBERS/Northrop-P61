@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- Flack burst (cannon impact), by Dave Culp -->
 <PropertyList>
 
   <submodel>
     <name>bullet splash</name>
-    <model>Aircraft/Northrop-P61/Models/Effects/guns/explosion.xml</model>
+    <model>Aircraft/A-26-Invader/Models/Effects/guns/explosion.xml</model>
     <speed>0</speed>
     <repeat>false</repeat>
     <delay>0</delay>

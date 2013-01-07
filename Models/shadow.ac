@@ -1,26 +1,26 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "DefaultWhite" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
 OBJECT world
 kids 1
 OBJECT poly
 name "shadow"
+loc 0 0 -0
 data 6
 shadow
 texture "shadow.png"
-texrep 1 1
-crease 30.000000
+texrep 1.000000 1.000000
+crease 30.000001
 numvert 4
--7.554999 -1.863055 -10.059988
--7.554998 -1.863055 10.06
-7.554999 -1.863055 10.059992
-7.554996 -1.863055 -10.06
+-7.555 0 -10.059989
+-7.554999 0 10.059999
+7.555 0 10.059994
+7.554995 0 -10.06
 numsurf 1
 SURF 0x00
-mat 1
+mat 0
 refs 4
-0 6.31154506436e-08 0.999999403954
-1 0.0 0.0
-2 1.0 3.31795263264e-07
-3 0.999999880791 1.0
+0 0 0.999999403954
+1 0.000000066672 0
+2 1 0.000000267395
+3 0.999999582767 0.999999940395
 kids 0
