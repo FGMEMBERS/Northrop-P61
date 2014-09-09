@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -4.737 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.196 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Guners -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -2.875 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.437 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Bomber -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m>  1.299 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.379 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Planche de bord -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -5.324 </x-m>
+      <y-m>  0.011 </y-m>
+      <z-m>  0.352 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+

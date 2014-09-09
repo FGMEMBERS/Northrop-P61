@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Cranking effects -->
+  <!-- Left -->
+  <model>
+    <path>Aircraft/F7F-Tigercat/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.07861 </y-m>
+      <z-m>  0.76130 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F7F-Tigercat/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.19216 </y-m>
+      <z-m>  0.74022 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F7F-Tigercat/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.75717 </y-m>
+      <z-m>  0.17910 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F7F-Tigercat/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.76628 </y-m>
+      <z-m>  0.07128 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F7F-Tigercat/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.76391 </y-m>
+      <z-m> -0.05029 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F7F-Tigercat/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.75001 </y-m>
+      <z-m> -0.16658 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F7F-Tigercat/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.29675 </y-m>
+      <z-m> -0.70247 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F7F-Tigercat/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.18148 </y-m>
+      <z-m> -0.74001 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F7F-Tigercat/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.06335 </y-m>
+      <z-m> -0.76130 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Right -->
+  <model>
+    <path>Aircraft/F7F-Tigercat/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m>  0.07861 </y-m>
+      <z-m>  0.76130 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F7F-Tigercat/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m>  0.19216 </y-m>
+      <z-m>  0.74022 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F7F-Tigercat/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m>  0.75717 </y-m>
+      <z-m>  0.17910 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F7F-Tigercat/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m>  0.76628 </y-m>
+      <z-m>  0.07128 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F7F-Tigercat/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m>  0.76391 </y-m>
+      <z-m> -0.05029 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F7F-Tigercat/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m>  0.75001 </y-m>
+      <z-m> -0.16658 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F7F-Tigercat/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m>  0.29675 </y-m>
+      <z-m> -0.70247 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F7F-Tigercat/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m>  0.18148 </y-m>
+      <z-m> -0.74001 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F7F-Tigercat/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m>  0.06335 </y-m>
+      <z-m> -0.76130 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+
