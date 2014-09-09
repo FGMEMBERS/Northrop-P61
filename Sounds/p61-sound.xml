@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+ 
+<PropertyList>
+
+  <fx>
+
+    <!-- Engine Left -->
+    <crank>
+      <name>engstart1</name>
+      <path>Aircraft/Northrop-P61/Sounds/starter.wav</path>
+      <property>/engines/engine[0]/cranking</property>
+      <volume> 
+        <property>/orientation/alpha-deg</property>
+        <type>log</type>
+        <min>0.5</min>
+        <max>1.0</max>
+      </volume>
+      <volume> 
+        <factor>2.0</factor>
+        <max>2.0</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+   
+    <crank>
+      <name>cough1</name>
+      <path>Aircraft/Northrop-P61/Sounds/start.wav</path>
+      <property>/engines/engine[0]/running</property>
+      <volume> 
+        <property>/orientation/alpha-deg</property>
+        <type>log</type>
+        <min>0.5</min>
+        <max>1.0</max>
+      </volume>
+      <volume> 
+        <factor>1.2</factor>
+        <max>1.0</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+
+    <engine>
+      <name>engine1_idle</name>
+      <mode>looped</mode>
+      <path>Aircraft/Northrop-P61/Sounds/running-slow.wav</path>
+      <condition>
+        <and>
+          <property>engines/engine[0]/running</property>
+          <less-than>
+            <property>engines/engine[0]/rpm</property>
+            <value>1700</value>
+          </less-than>
+        </and>
+      </condition>
+      <volume>
+        <property>engines/engine[0]/mp-osi</property>
+        <factor>0.009</factor>
+        <min>0.15</min>
+        <max>0.6</max>
+        <offset>0.15</offset>
+      </volume>
+      <pitch>
+        <property>engines/engine[0]/rpm</property>
+        <factor>0.0004</factor>
+        <min>0.1</min>
+        <max>2.0</max>
+        <offset>0.3</offset>
+      </pitch>
+      <position>
+        <x> -3.10 </x>
+        <y>  8.35 </y>
+        <z> -0.30 </z>
+      </position>
+      <reference-dist>20.0</reference-dist>
+      <max-dist>50.0</max-dist>
+    </engine>
+
+    <engine>
+      <name>engineLeft</name>
+      <mode>looped</mode>
+      <path>Aircraft/Northrop-P61/Sounds/running.wav</path>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <not>
+            <property>/sim/current-view/internal</property>
+          </not>
+        </and>
+      </condition>
+      <volume>
+        <property>engines/engine[0]/mp-osi</property>
+        <factor>0.00375</factor>
+        <min>0.5</min>
+        <max>2.0</max>
+      </volume>
+      <pitch>
+        <property>/engines/engine[0]/rpm</property>
+        <factor>0.00028</factor>
+        <min>0.15</min>
+        <max>2.0</max>
+        <offset>-0.0</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+      <position>
+        <x> -2.627 </x>
+        <y>  1.740 </y>
+        <z>  0.021 </z>
+      </position>
+    </engine>
+
+    <stopext>
+      <name>stopextLeft</name>
+      <path>Aircraft/Northrop-P61/Sounds/shutdown.wav</path>
+      <condition>
+        <not>
+          <property>/engines/engine[0]/running</property>
+        </not>
+      </condition>
+      <volume>
+        <property>/sim/current-view/internal</property>
+        <factor>-1.0</factor>
+        <offset>1.0</offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+      <position>
+        <x> -2.627 </x>
+        <y>  1.740 </y>
+        <z>  0.021 </z>
+      </position>
+    </stopext>
+
+    <stop>
+      <name>stopLeft</name>
+      <path>Aircraft/Northrop-P61/Sounds/shutdown.wav</path>
+      <condition>
+        <not>
+          <property>/engines/engine[0]/running</property>
+        </not>
+      </condition>
+      <volume>
+        <property>/sim/current-view/internal</property>
+        <factor>1.0</factor>
+        <offset>0.0</offset>
+      </volume>
+        <reference-dist>100</reference-dist>
+        <max-dist>1000</max-dist>
+      <position>
+        <x> -2.627 </x>
+        <y>  1.740 </y>
+        <z>  0.021 </z>
+      </position>
+    </stop> 
+
+    <!-- Engine Right -->
+    <crank>
+      <name>engstart1</name>
+      <path>Aircraft/Northrop-P61/Sounds/starter.wav</path>
+      <property>/engines/engine[1]/cranking</property>
+      <volume> 
+        <property>/orientation/alpha-deg</property>
+        <type>log</type>
+        <min>0.5</min>
+        <max>1.0</max>
+      </volume>
+      <volume> 
+        <factor>2.0</factor>
+        <max>2.0</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+   
+    <crank>
+      <name>cough1</name>
+      <path>Aircraft/Northrop-P61/Sounds/start.wav</path>
+      <property>/engines/engine[1]/running</property>
+      <volume> 
+        <property>/orientation/alpha-deg</property>
+        <type>log</type>
+        <min>0.5</min>
+        <max>1.0</max>
+      </volume>
+      <volume> 
+        <factor>1.2</factor>
+        <max>1.0</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+
+    <engine>
+      <name>engine1_idle</name>
+      <mode>looped</mode>
+      <path>Aircraft/Northrop-P61/Sounds/running-slow.wav</path>
+      <condition>
+        <and>
+          <property>engines/engine[1]/running</property>
+          <less-than>
+            <property>engines/engine[1]/rpm</property>
+            <value>1700</value>
+          </less-than>
+        </and>
+      </condition>
+      <volume>
+        <property>engines/engine[1]/mp-osi</property>
+        <factor>0.009</factor>
+        <min>0.15</min>
+        <max>0.6</max>
+        <offset>0.15</offset>
+      </volume>
+      <pitch>
+        <property>engines/engine[1]/rpm</property>
+        <factor>0.0004</factor>
+        <min>0.1</min>
+        <max>2.0</max>
+        <offset>0.3</offset>
+      </pitch>
+      <position>
+        <x> -3.10 </x>
+        <y>  8.35 </y>
+        <z> -0.30 </z>
+      </position>
+      <reference-dist>20.0</reference-dist>
+      <max-dist>50.0</max-dist>
+    </engine>
+
+    <engine>
+      <name>engineLeft</name>
+      <mode>looped</mode>
+      <path>Aircraft/Northrop-P61/Sounds/running.wav</path>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <not>
+            <property>/sim/current-view/internal</property>
+          </not>
+        </and>
+      </condition>
+      <volume>
+        <property>engines/engine[1]/mp-osi</property>
+        <factor>0.00375</factor>
+        <min>0.5</min>
+        <max>2.0</max>
+      </volume>
+      <pitch>
+        <property>/engines/engine[1]/rpm</property>
+        <factor>0.00028</factor>
+        <min>0.15</min>
+        <max>2.0</max>
+        <offset>-0.0</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+      <position>
+        <x> -2.627 </x>
+        <y>  1.740 </y>
+        <z>  0.021 </z>
+      </position>
+    </engine>
+
+    <stopext>
+      <name>stopextLeft</name>
+      <path>Aircraft/Northrop-P61/Sounds/shutdown.wav</path>
+      <condition>
+        <not>
+          <property>/engines/engine[1]/running</property>
+        </not>
+      </condition>
+      <volume>
+        <property>/sim/current-view/internal</property>
+        <factor>-1.0</factor>
+        <offset>1.0</offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+      <position>
+        <x> -2.627 </x>
+        <y>  1.740 </y>
+        <z>  0.021 </z>
+      </position>
+    </stopext>
+
+    <stop>
+      <name>stopLeft</name>
+      <path>Aircraft/Northrop-P61/Sounds/shutdown.wav</path>
+      <condition>
+        <not>
+          <property>/engines/engine[1]/running</property>
+        </not>
+      </condition>
+      <volume>
+        <property>/sim/current-view/internal</property>
+        <factor>1.0</factor>
+        <offset>0.0</offset>
+      </volume>
+        <reference-dist>100</reference-dist>
+        <max-dist>1000</max-dist>
+      <position>
+        <x> -2.627 </x>
+        <y>  1.740 </y>
+        <z>  0.021 </z>
+      </position>
+    </stop> 
+
+    <rumble>
+      <name>rumble</name>
+      <mode>looped</mode>
+      <path>Sounds/rumble.wav</path>
+      <condition>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+        </or>
+      </condition>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <type>log</type>
+        <factor>0.25</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </rumble>
+
+    <gear>
+      <name>gear</name>
+      <mode>in-transit</mode>
+      <path>Aircraft/Northrop-P61/Sounds/gear.wav</path>
+      <property>/gear/gear[0]/position-norm</property>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </gear>
+
+    <gear>
+      <name>gear-lock</name>
+      <path>Sounds/gear-lck.wav</path>
+      <condition>
+        <greater-than>
+          <property>/gear/gear[0]/position-norm</property>
+          <value>0.9</value>
+        </greater-than>
+      </condition>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </gear>
+
+    <squeal>
+      <name>squeal</name>
+      <path>Sounds/squeal.wav</path>
+      <condition>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+        </or>
+      </condition>
+      <volume>
+        <property>/velocities/speed-down-fps</property>
+        <factor>0.5</factor>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.01</factor>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <internal>dt_stop</internal>
+        <factor>0.05</factor>
+        <max>1.0</max>
+      </volume>
+      <pitch>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.0025</factor>
+        <offset>0.5</offset>
+        <max>1.0</max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </squeal>
+ 
+    <flap>
+      <name>flaps</name>
+      <mode>in-transit</mode>
+      <path>Aircraft/Northrop-P61/Sounds/flaps.wav</path>
+      <property>/surface-positions/flap-pos-norm</property>
+      <volume>
+        <factor>0.8</factor>
+      </volume>
+      <reference-dist>10</reference-dist>
+      <max-dist>20</max-dist>
+    </flap>
+
+    <wind>
+      <name>wind</name>
+      <mode>looped</mode>
+      <path>Sounds/wind.wav</path>
+      <property>/velocities/airspeed-kt</property>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.0025</factor>
+        <min>0.00</min>
+        <max>0.25</max>
+      </volume>
+      <pitch>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.01</factor>
+        <offset>0.5</offset>
+        <max>1.0</max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </wind>
+ 
+    <stall>
+      <name>stall</name>
+      <mode>looped</mode>
+      <path>Sounds/stall.wav</path>
+      <property>/sim/alarms/stall-warning</property>
+      <volume>
+        <property>/sim/alarms/stall-warning</property>
+        <max>1.0</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </stall>
+ 
+    <canopy> 
+      <name>canopy slide</name>
+      <mode>in-transit</mode>
+      <path>Aircraft/Northrop-P61/Sounds/canopy.wav</path>
+      <property>gear/canopy/position-norm</property>
+      <volume> 
+        <factor>0.3</factor>
+      </volume>
+      <reference-dist>10.0</reference-dist>
+      <max-dist>20.0</max-dist>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </canopy>
+
+    <guns> 
+      <name>gunfire</name>
+      <mode>looped</mode>
+      <path>Aircraft/Northrop-P61/Sounds/gunfire.wav</path>
+      <condition> 
+        <property>controls/armament/trigger</property>
+        <property>ai/submodels/submodel/count</property>
+      </condition>
+      <volume> 
+        <factor>1.2</factor>
+        <max>1.0</max>
+      </volume>
+    </guns>
+
+  </fx>
+ 
+</PropertyList>
