@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<PropertyList>
+
+  <path>flapgear.ac</path>
+
+  <animation>
+    <!-- Objects Opaques -->
+    <object-name>fond</object-name>
+    <object-name>FlapGear.face</object-name>
+    <object-name>Lgear.needle</object-name>
+    <object-name>Rgear.needle</object-name>
+    <object-name>Cgear.needle</object-name>
+    <object-name>Flap.needle</object-name>
+
+    <!-- Objects Transparents -->
+    <object-name>vitre</object-name>
+  </animation>
+  
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Northrop-P61/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation>
+    <type>material</type>
+    <object-name>Flap.needle</object-name>
+    <object-name>Lgear.needle</object-name>
+    <object-name>Rgear.needle</object-name>
+    <object-name>Cgear.needle</object-name>
+    <object-name>FlapGear.face</object-name>
+    <!--
+    <condition>
+      <property>controls/lighting/instrument-lights</property>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    -->
+    <emission>
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      <red>   0.9 </red>
+      <green> 0.5 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Flap.needle</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor> -90 </factor>
+    <center>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.00047 </y-m>
+      <z-m>  0.02270 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Lgear.needle</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <factor> 90 </factor>
+    <center>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.01074 </y-m>
+      <z-m> -0.00125 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Rgear.needle</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <factor> -90 </factor>
+    <center>
+      <x-m>  0.00000 </x-m>
+      <y-m>  0.01039 </y-m>
+      <z-m> -0.00136 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Cgear.needle</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <factor> 90 </factor>
+    <center>
+      <x-m>  0.00000 </x-m>
+      <y-m>  0.00073 </y-m>
+      <z-m> -0.01762 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
