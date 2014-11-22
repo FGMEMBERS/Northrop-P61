@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- Gary R. Neely 'Buckaroo', Nov 2008
+     Wolfram Gottfried 'Yakko', Nov 2008
+     Adapté au Technam P92 05/2011 Ernest Teuscher
+     Update Rembradnt Emmanuel BARANGER 11/2014 -->
+<PropertyList>
+
+  <path>rmi.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>visses</object-name>
+    <object-name>face</object-name>
+    <object-name>needle1</object-name>
+    <object-name>needle2</object-name>
+    <object-name>bug</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Northrop-P61/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle1</object-name>
+    <object-name>needle2</object-name>
+    <object-name>bug</object-name>
+    <!--
+    <condition>
+      <property>controls/lighting/instrument-lights</property>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    -->
+    <emission>
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      <red>   0.9 </red>
+      <green> 0.5 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>face</object-name>
+    <object-name>needle2</object-name>  
+    <property>/orientation/heading-magnetic-deg</property>
+    <factor> -1 </factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- Needle 1(ADF) -->
+  <animation>
+    <type>rotate</type>
+    <object-name>needle1</object-name>
+    <property>/instrumentation/kr-87/outputs/needle-deg</property>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- Needle 2 (VOR)-->
+  <animation>
+    <type>rotate</type>
+    <object-name>needle2</object-name>
+    <property>instrumentation/nav/heading-deg/</property>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
