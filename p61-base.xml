@@ -1,57 +1,36 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
-  <sim include="Nasal/views.xml">
-
-    <author>BARANGER Emmanuel (3D)</author>
-    <aircraft-version>0.1</aircraft-version>
+  
+  <sim include="Systems/views.xml">
+    
+    <description>Northrop P 61 (YASim)</description>
+    <author>BARANGER Emmanuel (3D/FDM)</author>
+    <aircraft-version>0.2</aircraft-version>
     <status>Alpha</status>
-
+    
     <fuel-fraction>0.8</fuel-fraction>
-
+    
     <startup>
       <splash-texture>Aircraft/Northrop-P61/p61-splash.png</splash-texture>
     </startup>
-
+    
     <model>
       <path>Aircraft/Northrop-P61/Models/p61.xml</path>
       <livery>
         <file type="string">default</file>
       </livery>
     </model>
-
+    
     <submodels>
       <serviceable type="bool">true</serviceable>
       <path>Aircraft/Northrop-P61/Models/Effects/guns/submodels.xml</path>
     </submodels>
-
+    
     <sound>
       <path>Aircraft/Northrop-P61/Sounds/p61-sound.xml</path>
     </sound>
-
-    <multiplay>
-      <chat_display>1</chat_display>
-      <generic> 
-        <int type="int" n="0">  0 </int>                                           <!--  0 immat -->
-        <int type="int" n="1">  0 </int>                                           <!--  1 immat -->
-        <int type="int" n="2">  0 </int>                                           <!--  2 immat -->
-        <int type="int" n="3">  0 </int>                                           <!--  3 immat -->
-        <int type="int" n="4">  0 </int>                                           <!--  4 immat -->
-        <int type="int" n="5">  0 </int>                                           <!--  5 immat -->
-        <int type="bool" n="6" alias="/smoke/active"> 0 </int>                     <!--  6 start smoke -->
-        <int type="int" n="7" alias="smoke/particlepersec"> 50 </int>              <!--  7 particlepersec -->
-        <int type="int" n="10" alias="controls/armament/trigger">0</int>           <!-- 10 reserved for bombable mode -->
-        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
-        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
-        <float n="2" alias="/position/gear-agl-m"> 0 </float>                      <!-- altitude for MP shadow -->
-        <float n="3" alias="/smoke/colors/knob-red">1</float>                      <!-- 3 smoke mixer red setting -->
-        <float n="4" alias="/smoke/colors/knob-green">1</float>                    <!-- 4 smoke mixer green setting -->
-        <float n="5" alias="/smoke/colors/knob-blue">1</float>                     <!-- 5 smoke mixer blue setting -->
-        <string n="9" type="string"/>                                              <!-- string[9] reserved for bombable mode -->
-      </generic>
-    </multiplay>
-
+    
     <flaps>
       <setting> 0.00 </setting>
       <setting> 0.25 </setting>
@@ -59,36 +38,81 @@
       <setting> 0.75 </setting>
       <setting> 1.00 </setting>
     </flaps>
-
-    <help>
-      <title>Northrop P61</title>
-      <key>
-        <name>d</name>
-        <desc>Open/Close bimb bay door</desc>
-      </key>
-      <key>
-        <name>e</name>
-        <desc>Guns fire</desc>
-      </key>
-    </help>
-
+    
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                          <!-- 0 immat -->
+        <int type="int" n="1">  0 </int>                                          <!-- 1 immat -->
+        <int type="int" n="2">  0 </int>                                          <!-- 2 immat -->
+        <int type="int" n="3">  0 </int>                                          <!-- 3 immat -->
+        <int type="int" n="4">  0 </int>                                          <!-- 4 immat -->
+        <int type="int" n="5">  0 </int>                                          <!-- 5 immat -->
+        <int type="bool" n="6"> 1 </int>                                          <!-- 6 smoke/bomb/torpedo -->
+        <int type="int" n="7">  0 </int>                                          <!-- 7 color -->
+        <int n="8" alias="/systems/electrical/outputs/nav-lights">  0 </int>      <!-- 8 nav-lights -->
+        <int n="9" alias="/sim/model/lights/beacon/state">  false </int>          <!-- 9 strobe-lights -->
+        <float n="0" alias="/sim/model/door-positions/crew/position-norm"/>
+        <float n="1" alias="/sim/model/door-positions/passenger/position-norm"/>
+        <float n="2" alias="/position/gear-agl-m"> 0 </float>                     <!-- altitude for MP shadow -->
+        <float n="3" alias="/position/altitude-ft"> 0 </float>                    <!-- altitude for Smoke/Trail -->
+        <float n="4" alias="/sim/model/door-positions/leftbagage/position-norm"/>
+        <float n="5" alias="/sim/model/door-positions/rightbagage/position-norm"/>
+        <float n="6" alias="/engines/engine[0]/rpm"/>
+        <float n="7" alias="/engines/engine[0]/cranking"/>
+        <float n="8" alias="/engines/engine[1]/rpm"/>
+        <float n="9" alias="/engines/engine[1]/cranking"/>
+        <float n="10" alias="/gear/gear[0]/wow/"/>
+        <float n="11" alias="/gear/gear[1]/wow/"/>
+        <float n="12" alias="/gear/gear[2]/wow/"/>
+        <float n="13" alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="14" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float n="15" alias="/gear/gear[2]/rollspeed-ms"/>
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string" />
+      </generic>
+    </multiplay>
+    
+    <help include="Systems/help.xml"/>
+    
     <menubar include="Dialogs/p61-menu.xml"/>
-
+    
   </sim>
-
+  
   <controls>
+    <gear>
+      <brake-parking type="bool">1</brake-parking>
+    </gear>
+    <lighting>
+      <instrument-lights type="bool">0</instrument-lights>
+      <nav-lights type="bool">0</nav-lights>
+      <strobe type="bool">0</strobe>
+      <landing-lights type="bool">0</landing-lights>
+      <luminosite-lights type="float">0.8</luminosite-lights>
+      <panel-dim type="float">0.5</panel-dim>
+    </lighting>
+    <electric>
+      <battery-switch>0</battery-switch>
+      <generator>0</generator>
+      <engines>
+        <engine>
+          <fuel-pump>0</fuel-pump>
+        </engine>
+      </engines>
+    </electric>
     <engines>
       <engine n="0">
-	<boost type="double">0</boost>
+        <boost type="double">0</boost>
         <magnetos>0</magnetos>
       </engine>
       <engine n="1">
-	<boost type="double">0</boost>
+        <boost type="double">0</boost>
         <magnetos>0</magnetos>
       </engine>
     </engines>
   </controls>
-
+  
   <engines>
     <engine n="0">
       <engine-num type="int">0</engine-num>
@@ -101,23 +125,23 @@
       <running>false</running>
     </engine>
   </engines>
-
+  
   <input>
-    <keyboard include="Nasal/p61-keyboard.xml"/>
+    <keyboard include="Systems/p61-keyboard.xml"/>
   </input>
- 
+  
   <nasal>
     <doors>
       <file>Aircraft/Northrop-P61/Nasal/doors.nas</file>
     </doors>
+    <p61>
+      <file>Aircraft/Northrop-P61/Nasal/liveries.nas</file>
+      <file>Aircraft/Northrop-P61/Nasal/light.nas</file>
+    </p61>
     <guns>
       <file>Aircraft/Northrop-P61/Nasal/weapons.nas</file>
       <file>Aircraft/Northrop-P61/Nasal/revi.nas</file>
     </guns>
-    <p61>
-      <file>Aircraft/Northrop-P61/Nasal/liveries.nas</file>
-    </p61>
   </nasal>
-
+  
 </PropertyList>
-

@@ -13,9 +13,9 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-    
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -131,12 +131,6 @@
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
   </animation>
 
   <effect>
@@ -168,22 +162,21 @@
     <object-name>antenne</object-name>
   </effect>
 
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Northrop-P61/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>vitres</object-name>
     <object-name>propblurG</object-name>
     <object-name>propblurD</object-name>
     <object-name>propdiscG</object-name>
     <object-name>propdiscD</object-name>
-  </animation>
-
+  </effect>
+  
   <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/Northrop-P61/Models/shadow.xml</path>
@@ -194,7 +187,7 @@
     </offsets>
   </model>
 
-  <!-- Intrieur -->
+  <!-- Intérieur -->
   <model>
     <path>Aircraft/Northrop-P61/Models/Interior/interior.xml</path>
   </model>
@@ -316,7 +309,7 @@
     </offsets>
   </model>
 
-  <!-- Les hlices --> 
+  <!-- Les hélices --> 
   <animation>
     <name>HeliceCompleteG</name>
     <object-name>propdiscG</object-name>
@@ -325,7 +318,7 @@
     <object-name>bolGE</object-name>
   </animation>
 
-  <!-- Slction de l'objet visible en fonction des rpm -->
+  <!-- Séléction de l'objet visible en fonction des rpm -->
   <animation>
     <type>select</type>
     <object-name>propdiscG</object-name>
@@ -368,6 +361,12 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceCompleteG</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
     <property>/engines/engine[0]/rpm</property>
     <factor> 1 </factor>
     <center>
@@ -390,7 +389,7 @@
     <object-name>bolD</object-name>
   </animation>
 
-  <!-- Slction de l'objet visible en fonction des rpm -->
+  <!-- Séléction de l'objet visible en fonction des rpm -->
   <animation>
     <type>select</type>
     <object-name>propdiscD</object-name>
@@ -433,6 +432,12 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceCompleteD</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[1]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
     <property>/engines/engine[1]/rpm</property>
     <factor> 1 </factor>
     <center>
@@ -483,7 +488,7 @@
     <type>rotate</type>
     <object-name>directionG</object-name>
     <property>surface-positions/rudder-pos-norm</property>
-    <factor> 20 </factor>
+    <factor> 15 </factor>
     <center>
       <x-m>  6.763 </x-m>
       <y-m> -2.817 </y-m>
@@ -500,7 +505,7 @@
     <type>rotate</type>
     <object-name>directionD</object-name>
     <property>surface-positions/rudder-pos-norm</property>
-    <factor> 20 </factor>
+    <factor> 15 </factor>
     <center>
       <x-m> 6.763	 </x-m>
       <y-m> 2.817 </y-m>
@@ -518,7 +523,7 @@
     <type>rotate</type>
     <object-name>profondeur</object-name>
     <property>surface-positions/elevator-pos-norm</property>
-    <factor> 20 </factor>
+    <factor> 15 </factor>
     <center>
      <x-m> 6.834 </x-m>
      <y-m> 0.000 </y-m>
@@ -631,7 +636,7 @@
     </axis>
   </animation>
 
-  <!-- Animation des portes des train -->
+  <!-- Animation des portes des trains -->
   <animation>
     <type>rotate</type>
     <object-name>porteAG</object-name>
@@ -748,7 +753,7 @@
     </axis>
   </animation>
 
-  <!-- Rentr des roues -->
+  <!-- Rentré des roues -->
   <animation>
     <name>TrainAvant</name>
     <object-name>axeAH</object-name>
@@ -836,6 +841,7 @@
   <!-- Compression -->
   <animation>
     <name>RoueAvant</name>
+    <object-name>axeAB</object-name>
     <object-name>roueA</object-name>
   </animation>
 
@@ -844,19 +850,24 @@
     <object-name>RoueAvant</object-name>
     <property>gear/gear[0]/compression-norm</property>
     <interpolation>
-      <entry><ind> 0.00 </ind><dep> -0.08 </dep></entry>
-      <entry><ind> 0.13 </ind><dep>  0.00 </dep></entry>
-      <entry><ind> 1.00 </ind><dep>  0.29 </dep></entry>
+      <entry><ind> 0 </ind><dep> 0.0000 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.1628 </dep></entry>
     </interpolation>
+    <center>
+      <x-m> -5.52056 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.92213 </z-m>
+    </center>
     <axis>
-      <x> 0 </x>
-      <y> 0 </y>
-      <z> 1 </z>
+      <x> 0.03 </x>
+      <y> 0.00 </y>
+      <z> 0.16 </z>
     </axis>
   </animation>
 
   <animation>
     <name>RoueGauche</name>
+    <object-name>axeGB</object-name>
     <object-name>roueG</object-name>
   </animation>
 
@@ -865,19 +876,24 @@
     <object-name>RoueGauche</object-name>
     <property>gear/gear[1]/compression-norm</property>
     <interpolation>
-      <entry><ind> 0.00 </ind><dep> -0.08 </dep></entry>
-      <entry><ind> 0.13 </ind><dep>  0.00 </dep></entry>
-      <entry><ind> 1.00 </ind><dep>  0.29 </dep></entry>
+      <entry><ind> 0 </ind><dep> 0.000 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.193 </dep></entry>
     </interpolation>
+    <center>
+      <x-m> -1.00859 </x-m>
+      <y-m> -2.43500 </y-m>
+      <z-m> -1.29312 </z-m>
+    </center>
     <axis>
-      <x> 0 </x>
-      <y> 0 </y>
-      <z> 1 </z>
+      <x> 0.0261 </x>
+      <y> 0.0000 </y>
+      <z> 0.1912 </z>
     </axis>
   </animation>
 
   <animation>
     <name>RoueDroite</name>
+    <object-name>axeGB</object-name>
     <object-name>roueD</object-name>
   </animation>
 
@@ -886,14 +902,18 @@
     <object-name>RoueDroite</object-name>
     <property>gear/gear[2]/compression-norm</property>
     <interpolation>
-      <entry><ind> 0.00 </ind><dep> -0.08 </dep></entry>
-      <entry><ind> 0.13 </ind><dep>  0.00 </dep></entry>
-      <entry><ind> 1.00 </ind><dep>  0.29 </dep></entry>
+      <entry><ind> 0 </ind><dep> 0.000 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.193 </dep></entry>
     </interpolation>
+    <center>
+      <x-m> -1.00859 </x-m>
+      <y-m>  2.43500 </y-m>
+      <z-m> -1.29312 </z-m>
+    </center>
     <axis>
-      <x> 0 </x>
-      <y> 0 </y>
-      <z> 1 </z>
+      <x> 0.0261 </x>
+      <y> 0.0000 </y>
+      <z> 0.1912 </z>
     </axis>
   </animation>
 
@@ -902,16 +922,14 @@
     <type>rotate</type>
     <object-name>roueA</object-name>
     <property>surface-positions/rudder-pos-norm</property>
-    <factor> 30 </factor>
-    <center>
-      <x-m> -5.705 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -1.801 </z-m>
-    </center>
+    <factor> 20 </factor>
     <axis>
-      <x> 0 </x>
-      <y> 0 </y>
-      <z> 1 </z>
+      <x1-m> -5.58380 </x1-m>
+      <y1-m>  0.00000 </y1-m>
+      <z1-m> -1.27968 </z1-m>
+      <x2-m> -5.47480 </x2-m>
+      <y2-m>  0.00000 </y2-m>
+      <z2-m> -0.66545 </z2-m>
     </axis>
   </animation>
 
@@ -967,5 +985,59 @@
     </axis>
   </animation>
 
+  <!-- Effets lumineux -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/lights/beacon.xml</path>
+    <offsets>
+      <x-m> 6.66393 </x-m>
+      <y-m> 2.76052 </y-m>
+      <z-m> 2.04434 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Northrop-P61/Models/lights/beacon.xml</path>
+    <offsets>
+      <x-m> -2.80283 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -1.05591 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Northrop-P61/Models/lights/RedLight.xml</path>
+    <offsets>
+      <x-m>  -1.41991 </x-m>
+      <y-m> -10.01648 </y-m>
+      <z-m>   0.80741 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Northrop-P61/Models/lights/StrobeLight.xml</path>
+    <offsets>
+      <x-m>  -1.40826 </x-m>
+      <y-m> -10.01648 </y-m>
+      <z-m>   0.80741 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Northrop-P61/Models/lights/GreenLight.xml</path>
+    <offsets>
+      <x-m> -1.41991 </x-m>
+      <y-m> 10.01648 </y-m>
+      <z-m>  0.80741 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Northrop-P61/Models/lights/StrobeLight.xml</path>
+    <offsets>
+      <x-m> -1.40826 </x-m>
+      <y-m> 10.01648 </y-m>
+      <z-m>  0.80741 </z-m>
+    </offsets>
+  </model>
+  
 </PropertyList>
-

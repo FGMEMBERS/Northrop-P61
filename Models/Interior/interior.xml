@@ -7,23 +7,19 @@
   <animation>
     <!-- Objets opaques -->
     <object-name>interieur</object-name>
-
+    <object-name>inttour</object-name>
+    <object-name>planchet</object-name>
+    
     <!-- Objets transparents -->
     <object-name>intvitres</object-name>
   </animation>
 
-  <animation>
-    <type>noshadow</type>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Northrop-P61/Models/Effects/Glass/glass</inherits-from>
     <object-name>intvitres</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>intvitres</object-name>
-  </animation>
-
+  </effect>
+  
   <!-- Pilote -->
   <model>
     <path>Aircraft/Northrop-P61/Models/Pilot/pilot.xml</path>
@@ -66,4 +62,3 @@
   </model>
 
 </PropertyList>
-
