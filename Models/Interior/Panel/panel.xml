@@ -11,6 +11,16 @@
     <!-- Objets transparents -->
   </animation>
 
+  <!-- RMI -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/Interior/Panel/Instruments/rmi/rmi.xml</path>
+    <offsets>
+      <x-m>  0.091 </x-m>
+      <y-m> -0.312 </y-m>
+      <z-m>  0.154 </z-m>
+    </offsets>
+  </model>
+  
   <!-- AI -->
   <model>
     <path>Aircraft/Northrop-P61/Models/Interior/Panel/Instruments/ai/ai.xml</path>
@@ -21,6 +31,16 @@
     </offsets>
   </model>
 
+  <!-- AI -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m>  0.088 </x-m>
+      <y-m> -0.046 </y-m>
+      <z-m> -0.042 </z-m>
+    </offsets>
+  </model>
+  
   <!-- ASI -->
   <model>
     <path>Aircraft/Northrop-P61/Models/Interior/Panel/Instruments/asi/asi.xml</path>
@@ -37,10 +57,20 @@
     <offsets>
       <x-m>  0.088 </x-m>
       <y-m> -0.313 </y-m>
-      <z-m>  0.074 </z-m>
+      <z-m>  0.075 </z-m>
     </offsets>
   </model>
 
+  <!-- RADIO ALT -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/Interior/Panel/Instruments/radioalt/radioalt.xml</path>
+    <offsets>
+      <x-m> 0.089 </x-m>
+      <y-m> 0.109 </y-m>
+      <z-m> 0.169 </z-m>
+    </offsets>
+  </model>
+  
   <!-- VSI -->
   <model>
     <path>Aircraft/Northrop-P61/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
@@ -71,14 +101,114 @@
     </offsets>
   </model>
 
-  <!-- GYRO -->
+  <!-- MANIFOLD -->
   <model>
-    <path>Aircraft/Northrop-P61/Models/Interior/Panel/Instruments/gyro/gyro.xml</path>
+    <path>Aircraft/Northrop-P61/Models/Interior/Panel/Instruments/manifold/man.xml</path>
     <offsets>
-      <x-m>  0.090 </x-m>
-      <y-m> -0.045 </y-m>
-      <z-m> -0.043 </z-m>
+      <x-m> 0.081 </x-m>
+      <y-m> 0.113 </y-m>
+      <z-m> 0.088 </z-m>
     </offsets>
   </model>
-
+  
+  <!-- RPM -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/Interior/Panel/Instruments/rpm/rpm.xml</path>
+    <offsets>
+      <x-m> 0.081 </x-m>
+      <y-m> 0.190 </y-m>
+      <z-m> 0.088 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- OIL TEMPERATURE -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/Interior/Panel/Instruments/oilt/oilt.xml</path>
+    <offsets>
+      <x-m> 0.085 </x-m>
+      <y-m> 0.113 </y-m>
+      <z-m> 0.011 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- CYLINDER TEMPERATURE -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/Interior/Panel/Instruments/cylt/cylt.xml</path>
+    <offsets>
+      <x-m> 0.085 </x-m>
+      <y-m> 0.190 </y-m>
+      <z-m> 0.011 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- OIL PRESSURE -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/Interior/Panel/Instruments/oilp/oilp.xml</path>
+    <offsets>
+      <x-m>  0.082 </x-m>
+      <y-m>  0.113 </y-m>
+      <z-m> -0.070 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- FUEL PRESSURE -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/Interior/Panel/Instruments/fuelp/fuelp.xml</path>
+    <offsets>
+      <x-m>  0.082 </x-m>
+      <y-m>  0.190 </y-m>
+      <z-m> -0.070 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- CARBURETOR AIR TEMPERATURE -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/Interior/Panel/Instruments/carbt/carbt.xml</path>
+    <offsets>
+      <x-m>  0.080 </x-m>
+      <y-m>  0.113 </y-m>
+      <z-m> -0.146 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- FLAPS GEARS -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/Interior/Panel/Instruments/flapsgear/flapgear.xml</path>
+    <offsets>
+      <x-m>  0.080 </x-m>
+      <y-m>  0.190 </y-m>
+      <z-m> -0.146 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- FLAPS GEARS -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/Interior/Panel/Instruments/N-9_Gunsight/N-9_Gunsight.xml</path>
+    <offsets>
+      <x-m>  0.100 </x-m>
+      <y-m> -0.099 </y-m>
+      <z-m>  0.163 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- CLOCK -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/Interior/Panel/Instruments/clock/clock.xml</path>
+    <offsets>
+      <x-m> 0.089 </x-m>
+      <y-m> 0.188 </y-m>
+      <z-m> 0.155 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- FUEL QUANTITY -->
+  <model>
+    <path>Aircraft/Northrop-P61/Models/Interior/Panel/Instruments/fuelqty/fuelqty.xml</path>
+    <offsets>
+      <x-m>  0.090 </x-m>
+      <y-m>  0.268 </y-m>
+      <z-m> -0.056 </z-m>
+    </offsets>
+  </model>
+  
 </PropertyList>

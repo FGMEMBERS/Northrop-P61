@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <cannon>
-    <model>Models/Geometry/tracer.xml</model>
+    <model>Aircraft/Northrop-P61/Models/Effects/guns/tracer.xml</model>
     <speed>2755.9</speed>
     <cd>0.193</cd>
     <weight>0.286600941</weight>
@@ -22,10 +22,10 @@
     <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
     <submodel-path>Aircraft/Northrop-P61/Models/Effects/guns/bullet-submodel.xml</submodel-path>
     <impact-reports>sim/ai/aircraft/collision/cannon</impact-reports>
+    <yaw-offset>0</yaw-offset>
     <pitch-offset>0.1</pitch-offset>
   </cannon>
-
-  <!-- Gauche extérieur -->
+  
   <submodel>
     <name>Left exterior gun</name>
     <model alias="../../cannon/model"/>
@@ -47,32 +47,12 @@
     <x-offset> 6.125 </x-offset> <!-- -1.867 m = 6.125 ft -->
     <y-offset> 0.804 </y-offset> <!-- -0.245 m = 0.804 ft -->
     <z-offset> 3.888 </z-offset> <!--  1.185 m = 3.888 ft -->
-    <yaw-offset>0</yaw-offset>
+    <yaw-offset  alias="../../cannon/yaw-offset"/>
     <pitch-offset alias="../../cannon/pitch-offset"/>
   </submodel>
-
+  
   <submodel>
-    <name>Left exterior smoke</name>
-    <model>Aircraft/F7F-Tigercat/Models/Effects/guns/smoke.xml</model>
-    <trigger alias="../../cannon/trigger"/>
-    <speed>200</speed>
-    <repeat>true</repeat>
-    <delay>0.08</delay>
-    <count>160</count>
-    <x-offset> 6.125 </x-offset> <!-- -1.867 m = 6.125 ft -->
-    <y-offset> 0.804 </y-offset> <!-- -0.245 m = 0.804 ft -->
-    <z-offset> 3.888 </z-offset> <!--  1.185 m = 3.888 ft -->
-    <yaw-offset>-60</yaw-offset>
-    <pitch-offset>-60</pitch-offset>
-    <eda>10</eda>
-    <wind>true</wind>
-    <buoyancy>33</buoyancy>
-    <life>5</life>
-  </submodel>
-
-  <!-- Gauche intérieur -->
-  <submodel>
-    <name>Left exterior gun</name>
+    <name>Left interior gun</name>
     <model alias="../../cannon/model"/>
     <trigger alias="../../cannon/trigger"/>
     <speed alias="../../cannon/speed"/>
@@ -92,32 +72,12 @@
     <x-offset> 6.125 </x-offset> <!-- -1.867 m = 6.125 ft -->
     <y-offset> 0.410 </y-offset> <!-- -0.125 m = 0.410 ft -->
     <z-offset> 4.216 </z-offset> <!--  1.285 m = 4.216 ft -->
-    <yaw-offset>0</yaw-offset>
+    <yaw-offset  alias="../../cannon/yaw-offset"/>
     <pitch-offset alias="../../cannon/pitch-offset"/>
   </submodel>
-
+  
   <submodel>
-    <name>Left exterior smoke</name>
-    <model>Aircraft/F7F-Tigercat/Models/Effects/guns/smoke.xml</model>
-    <trigger alias="../../cannon/trigger"/>
-    <speed>200</speed>
-    <repeat>true</repeat>
-    <delay>0.08</delay>
-    <count>160</count>
-    <x-offset> 6.125 </x-offset> <!-- -1.867 m = 6.125 ft -->
-    <y-offset> 0.410 </y-offset> <!-- -0.125 m = 0.410 ft -->
-    <z-offset> 4.216 </z-offset> <!--  1.285 m = 4.216 ft -->
-    <yaw-offset>-60</yaw-offset>
-    <pitch-offset>-60</pitch-offset>
-    <eda>10</eda>
-    <wind>true</wind>
-    <buoyancy>33</buoyancy>
-    <life>5</life>
-  </submodel>
-
-  <!-- Droite intérieur -->
-  <submodel>
-    <name>Left exterior gun</name>
+    <name>Right interior gun</name>
     <model alias="../../cannon/model"/>
     <trigger alias="../../cannon/trigger"/>
     <speed alias="../../cannon/speed"/>
@@ -137,32 +97,12 @@
     <x-offset>  6.125 </x-offset> <!-- -1.867 m =  6.125 ft -->
     <y-offset> -0.410 </y-offset> <!--  0.125 m = -0.410 ft -->
     <z-offset>  4.216 </z-offset> <!--  1.285 m =  4.216 ft -->
-    <yaw-offset>0</yaw-offset>
+    <yaw-offset  alias="../../cannon/yaw-offset"/>
     <pitch-offset alias="../../cannon/pitch-offset"/>
   </submodel>
-
+  
   <submodel>
-    <name>Left exterior smoke</name>
-    <model>Aircraft/F7F-Tigercat/Models/Effects/guns/smoke.xml</model>
-    <trigger alias="../../cannon/trigger"/>
-    <speed>200</speed>
-    <repeat>true</repeat>
-    <delay>0.08</delay>
-    <count>160</count>
-    <x-offset>  6.125 </x-offset> <!-- -1.867 m =  6.125 ft -->
-    <y-offset> -0.410 </y-offset> <!--  0.125 m = -0.410 ft -->
-    <z-offset>  4.216 </z-offset> <!--  1.285 m =  4.216 ft -->
-    <yaw-offset>-60</yaw-offset>
-    <pitch-offset>-60</pitch-offset>
-    <eda>10</eda>
-    <wind>true</wind>
-    <buoyancy>33</buoyancy>
-    <life>5</life>
-  </submodel>
-
-  <!-- Gauche extérieur -->
-  <submodel>
-    <name>Left exterior gun</name>
+    <name>Right exterior gun</name>
     <model alias="../../cannon/model"/>
     <trigger alias="../../cannon/trigger"/>
     <speed alias="../../cannon/speed"/>
@@ -182,27 +122,8 @@
     <x-offset>  6.125 </x-offset> <!-- -1.867 m =  6.125 ft -->
     <y-offset> -0.804 </y-offset> <!--  0.245 m = -0.804 ft -->
     <z-offset>  3.888 </z-offset> <!--  1.185 m =  3.888 ft -->
-    <yaw-offset>0</yaw-offset>
+    <yaw-offset  alias="../../cannon/yaw-offset"/>
     <pitch-offset alias="../../cannon/pitch-offset"/>
   </submodel>
-
-  <submodel>
-    <name>Left exterior smoke</name>
-    <model>Aircraft/F7F-Tigercat/Models/Effects/guns/smoke.xml</model>
-    <trigger alias="../../cannon/trigger"/>
-    <speed>200</speed>
-    <repeat>true</repeat>
-    <delay>0.08</delay>
-    <count>160</count>
-    <x-offset>  6.125 </x-offset> <!-- -1.867 m =  6.125 ft -->
-    <y-offset> -0.804 </y-offset> <!--  0.245 m = -0.804 ft -->
-    <z-offset>  3.888 </z-offset> <!--  1.185 m =  3.888 ft -->
-    <yaw-offset>-60</yaw-offset>
-    <pitch-offset>-60</pitch-offset>
-    <eda>10</eda>
-    <wind>true</wind>
-    <buoyancy>33</buoyancy>
-    <life>5</life>
-  </submodel>
-
+  
 </PropertyList>
