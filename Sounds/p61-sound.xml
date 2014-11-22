@@ -82,12 +82,7 @@
       <mode>looped</mode>
       <path>Aircraft/Northrop-P61/Sounds/running.wav</path>
       <condition>
-        <and>
-          <property>/engines/engine[0]/running</property>
-          <not>
-            <property>/sim/current-view/internal</property>
-          </not>
-        </and>
+        <property>/engines/engine[0]/running</property>
       </condition>
       <volume>
         <property>engines/engine[0]/mp-osi</property>
@@ -233,12 +228,7 @@
       <mode>looped</mode>
       <path>Aircraft/Northrop-P61/Sounds/running.wav</path>
       <condition>
-        <and>
-          <property>/engines/engine[1]/running</property>
-          <not>
-            <property>/sim/current-view/internal</property>
-          </not>
-        </and>
+        <property>/engines/engine[1]/running</property>
       </condition>
       <volume>
         <property>engines/engine[1]/mp-osi</property>

@@ -7,4 +7,3 @@ toggle_revi = func {
       revi.open();
   }
 }
-

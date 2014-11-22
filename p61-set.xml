@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- <PropertyList include="p61-jsbsim-cnf.xml"> -->
-<PropertyList include="p61-yasim-cnf.xml">
+<PropertyList include="p61-base.xml">
 
   <sim>
+
     <description>Northrop P 61 (YASim)</description>
-    <author>BARANGER Emmanuel</author>
+    <author>BARANGER Emmanuel (3D/FDM)</author>
+    <aircraft-version>0.2</aircraft-version>
+    <status>Alpha</status>
+
+    <flight-model>yasim</flight-model>
+    <aero>p61-yasim</aero>
 
     <rating>
-      <FDM type="int">     2 </FDM>
+      <FDM type="int">     3 </FDM>
       <systems type="int"> 1 </systems>
-      <cockpit type="int"> 1 </cockpit>
+      <cockpit type="int"> 2 </cockpit>
       <model type="int">   4 </model>
     </rating>
 
   </sim>
 
 </PropertyList>
-

@@ -1,16 +1,16 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "transparent" rgb 0.547091 0.565624 0.595981 amb 0 0 0 emis 0 0 0 spec 1 1 1 shi 64 trans 0.85
+MATERIAL "transparent" rgb 1 1 1 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 64 trans 0.85
 OBJECT world
 kids 3
 OBJECT poly
 name "face"
-loc 0 0 -0
+loc 0.001136 0 -0
 data 4
 face
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 61.000003
+crease 180.000005
 numvert 17
 -0.001915 -0.000238 -0.038387
 -0.001915 0.014014 -0.035467
@@ -134,7 +134,7 @@ data 4
 fond
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 61.000003
+crease 180.000005
 numvert 324
 0.002275 -0.000198 0.04448
 0.002275 0.008395 0.043625

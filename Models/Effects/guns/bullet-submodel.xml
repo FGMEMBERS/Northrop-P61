@@ -4,7 +4,7 @@
 
   <submodel>
     <name>bullet splash</name>
-    <model>Aircraft/A-26-Invader/Models/Effects/guns/explosion.xml</model>
+    <model>Aircraft/Northrop-P61/Models/Effects/guns/flack.xml</model>
     <speed>0</speed>
     <repeat>false</repeat>
     <delay>0</delay>
