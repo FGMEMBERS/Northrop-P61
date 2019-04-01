@@ -168,13 +168,13 @@
                radius="1.8"
                cruise-speed="295"
                cruise-rpm="2325"
-               cruise-power="700"
+               cruise-power="1700"
                cruise-alt="5000"
                min-rpm="250"
                max-rpm="2700">
                <actionpt x="3.974" y="2.761" z="-0.057"/>
                <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
-               <piston-engine eng-power="2100" 
+               <piston-engine eng-power="2250" 
                               eng-rpm="2700"
                               displacement="2804.5">
                               <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
@@ -192,13 +192,13 @@
                radius="1.8"
                cruise-speed="295"
                cruise-rpm="2325"
-               cruise-power="700"
+               cruise-power="1700"
                cruise-alt="5000"
                min-rpm="250"
                max-rpm="2700">
                <actionpt x="3.974" y="-2.761" z="-0.057"/>
                <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE"/>
-               <piston-engine eng-power="2100" 
+               <piston-engine eng-power="2250" 
                               eng-rpm="2700"
                               displacement="2804.5">
                               <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
@@ -258,7 +258,7 @@
     <tank x="1.5" y="-4.817" z="0.56" capacity="1375"/>
     
     <!-- CG placment -->
-    <ballast x="8" y="0" z="-1" mass="1440"/>
-    <ballast x="-7" y="0" z="-1" mass="-1000"/>
+    <ballast x="4" y="0" z="-1" mass="3000">
+    <ballast x="-6" y="0" z="-0.75" mass="-1500"/>
 
 </airplane>
