@@ -258,7 +258,7 @@
     <tank x="1.5" y="-4.817" z="0.56" capacity="1375"/>
     
     <!-- CG placment -->
-    <ballast x="4" y="0" z="-1" mass="3000">
+    <ballast x="4" y="0" z="-1" mass="3000"/>
     <ballast x="-6" y="0" z="-0.75" mass="-1500"/>
 
 </airplane>
